@@ -12,7 +12,15 @@ public class PromptGenerator
             "What was the strongest emotion I felt today?",
             "If I had one thing I could do over today, what would it be?", 
             "What was something new I learned today?",
-            "What am I grateful for today?"
+            "What am I grateful for today?",
+            "What challenge did I overcome today?",
+            "What made me laugh today?",
+            "What is something I want to remember about today?",
+            "How did I help someone else today?",
+            "What was the most beautiful thing I saw today?",
+            "What did I do today that was out of my comfort zone?",
+            "What am I looking forward to tomorrow?",
+            "What is something I'm proud of accomplishing today?"
         };
 
     }

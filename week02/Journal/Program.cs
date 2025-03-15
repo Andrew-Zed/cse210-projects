@@ -20,7 +20,8 @@ class Program
             Console.WriteLine("2. Display the journal");
             Console.WriteLine("3. Save the journal to a file");
             Console.WriteLine("4. Load the journal from a file");
-            Console.WriteLine("5. Exit the program");
+            Console.WriteLine("5. View journal statistics");
+            Console.WriteLine("6. Exit the program");
             Console.Write("What will you like to do? ");
 
             string choice = Console.ReadLine();
@@ -40,6 +41,9 @@ class Program
                     LoadJournal(journal);
                     break;
                 case "5":
+                    journal.DisplaySatistics();
+                    break;
+                case "6":
                     running = false;
                     Console.WriteLine("Thank you for using the Journal Program. GoodBye!");
                     break;
@@ -64,7 +68,10 @@ class Program
 
         string date = DateTime.Now.ToShortDateString();
 
-        Entry entry = new Entry(date, prompt, response);
+        Console.WriteLine("How are you feeloing today? (Optional - press Enter to skip):");
+        string mood = Console.ReadLine();
+
+        Entry entry = new Entry(date, prompt, response, mood);
 
         journal.AddEntry(entry);
         Console.WriteLine("Entry added successfully!");    
