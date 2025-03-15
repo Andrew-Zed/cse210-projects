@@ -45,5 +45,4 @@ class Program
         Console.WriteLine($"Brother {userName}, the square of your number is {square}");
     }
 
-
 }
