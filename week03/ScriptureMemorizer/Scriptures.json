@@ -1,0 +1,39 @@
+{
+    "Scriptures": [
+      {
+        "Book": "John",
+        "Chapter": 3,
+        "StartVerse": 16,
+        "EndVerse": 17,
+        "Text": "For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life. For God sent not his Son into the world to condemn the world; but that the world through him might be saved."
+      },
+      {
+        "Book": "Proverbs",
+        "Chapter": 3,
+        "StartVerse": 5,
+        "EndVerse": 6,
+        "Text": "Trust in the LORD with all your heart and lean not on your own understanding; in all your ways submit to him, and he will make your paths straight."
+      },
+      {
+        "Book": "Philippians",
+        "Chapter": 4,
+        "StartVerse": 13,
+        "EndVerse": 13,
+        "Text": "I can do all this through him who gives me strength."
+      },
+      {
+        "Book": "Romans",
+        "Chapter": 8,
+        "StartVerse": 28,
+        "EndVerse": 28,
+        "Text": "And we know that in all things God works for the good of those who love him, who have been called according to his purpose."
+      },
+      {
+        "Book": "Psalm",
+        "Chapter": 23,
+        "StartVerse": 1,
+        "EndVerse": 3,
+        "Text": "The LORD is my shepherd, I lack nothing. He makes me lie down in green pastures, he leads me beside quiet waters, he refreshes my soul."
+      }
+    ]
+  }
