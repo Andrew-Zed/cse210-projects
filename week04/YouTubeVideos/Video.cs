@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+
 public class Video
 {
     // Attributes
@@ -54,5 +57,5 @@ public class Video
         int seconds = _lengthInSeconds % 60;
         return $"{minutes}:{seconds:D2}";
     }
-    
+
 }
