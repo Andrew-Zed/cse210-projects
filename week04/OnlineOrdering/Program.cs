@@ -1,51 +1,58 @@
 using System;
+using System.Collections.Generic;
 
 class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello World! This is the OnlineOrdering Project.");
+        Console.WriteLine("Online Ordering System\n");
 
-        // Create addresses
-        Address usaAddress = new Address("123 Main St", "Seattle", "WA", "USA");
-        Address internationalAddress = new Address("456 Maple Ave", "Toronto", "Ontario", "Canada");
+        // Create addresses for customers
+        Address usaAddress = new Address("123 Main Street", "Seattle", "WA", "USA");
+        Address internationalAddress = new Address("456 Maple Avenue", "Toronto", "Ontario", "Canada");
         
         // Create customers
-        Customer usaCustomer = new Customer("John Smith", usaAddress);
-        Customer internationalCustomer = new Customer("Emma Johnson", internationalAddress);
+        Customer usaCustomer = new Customer("Sarah Johnson", usaAddress);
+        Customer internationalCustomer = new Customer("David Martinez", internationalAddress);
         
         // Create products
-        Product product1 = new Product("Laptop", "TECH001", 899.99, 1);
-        Product product2 = new Product("Wireless Mouse", "TECH002", 24.99, 2);
-        Product product3 = new Product("Headphones", "TECH003", 149.99, 1);
-        Product product4 = new Product("USB Drive", "TECH004", 19.99, 3);
-        Product product5 = new Product("Phone Charger", "TECH005", 15.99, 2);
+        Product laptop = new Product("Premium Laptop", "TECH1001", 1299.99, 1);
+        Product headphones = new Product("Wireless Headphones", "TECH1002", 199.99, 1);
+        Product phoneCase = new Product("Phone Case", "ACC2001", 29.99, 2);
+        Product keyboard = new Product("Mechanical Keyboard", "TECH1003", 149.99, 1);
+        Product mouse = new Product("Wireless Mouse", "TECH1004", 49.99, 1);
         
-        // Create first order (USA)
+        // Create first order (USA customer)
+        Console.WriteLine("ORDER #1");
+        Console.WriteLine("========\n");
+        
         Order order1 = new Order(usaCustomer);
-        order1.AddProduct(product1);
-        order1.AddProduct(product2);
-        order1.AddProduct(product3);
+        order1.AddProduct(laptop);
+        order1.AddProduct(headphones);
+        order1.AddProduct(phoneCase);
         
-        // Create second order (International)
-        Order order2 = new Order(internationalCustomer);
-        order2.AddProduct(product3);
-        order2.AddProduct(product4);
-        order2.AddProduct(product5);
-        
-        // Display order 1 details
-        Console.WriteLine("ORDER 1");
-        Console.WriteLine("-------");
+        // Display order 1 information
         Console.WriteLine(order1.GetPackingLabel());
+        Console.WriteLine();
         Console.WriteLine(order1.GetShippingLabel());
-        Console.WriteLine($"Total Cost: ${order1.CalculateTotalCost():F2}");
+        Console.WriteLine();
+        Console.WriteLine($"Total Price: ${order1.CalculateTotalCost():F2}");
         Console.WriteLine();
         
-        // Display order 2 details
-        Console.WriteLine("ORDER 2");
-        Console.WriteLine("-------");
+        // Create second order (International customer)
+        Console.WriteLine("ORDER #2");
+        Console.WriteLine("========\n");
+        
+        Order order2 = new Order(internationalCustomer);
+        order2.AddProduct(keyboard);
+        order2.AddProduct(mouse);
+        order2.AddProduct(headphones);
+        
+        // Display order 2 information
         Console.WriteLine(order2.GetPackingLabel());
+        Console.WriteLine();
         Console.WriteLine(order2.GetShippingLabel());
-        Console.WriteLine($"Total Cost: ${order2.CalculateTotalCost():F2}");
+        Console.WriteLine();
+        Console.WriteLine($"Total Price: ${order2.CalculateTotalCost():F2}");
     }
 }

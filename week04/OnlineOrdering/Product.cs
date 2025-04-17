@@ -1,3 +1,5 @@
+using System;
+
 public class Product
 {
     // Private member variables

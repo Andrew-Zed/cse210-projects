@@ -2,13 +2,13 @@ public class Comment
 {
     // Attributes
     private string _commenterName;
-    private string _text;
+    private string _commentText;
 
     // Constructor
-    public Comment(string commenterName, string text)
+    public Comment(string commenterName, string commentText)
     {
         _commenterName = commenterName;
-        _text = text;
+        _commentText = commentText;
     }
 
     // Properties
@@ -17,8 +17,8 @@ public class Comment
         get { return _commenterName; }
     }
 
-    public string Text
+    public string CommentText
     {
-        get { return _text; }
+        get { return _commentText; }
     }
 }
